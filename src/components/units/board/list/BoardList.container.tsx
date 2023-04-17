@@ -9,7 +9,7 @@ import {
 } from "../../../../commons/types/generated/types";
 import { MouseEvent, useState } from "react";
 
-export default function BoardList() {
+export default function BoardListContainer() {
   const router = useRouter();
   const [keyword, setKeyword] = useState("");
 
@@ -17,7 +17,7 @@ export default function BoardList() {
     Pick<IQuery, "fetchBoards">,
     IQueryFetchBoardsArgs
   >(FETCH_BOARDS);
-  const { data: dataBoardsCount, refetch: refetchBoardsCount } = useQuery<
+  const { data: dataCount, refetch: refetchCount } = useQuery<
     Pick<IQuery, "fetchBoardsCount">,
     IQueryFetchBoardsCountArgs
   >(FETCH_BOARDS_COUNT);
@@ -40,8 +40,8 @@ export default function BoardList() {
       onClickMoveToBoardNew={onClickMoveToBoardNew}
       onClickMoveToBoardDetail={onClickMoveToBoardDetail}
       refetch={refetch}
-      refetchBoardsCount={refetchBoardsCount}
-      count={dataBoardsCount?.fetchBoardsCount}
+      refetchBoardsCount={refetchCount}
+      count={dataCount?.fetchBoardsCount}
       keyword={keyword}
       onChangeKeyword={onChangeKeyword}
     />

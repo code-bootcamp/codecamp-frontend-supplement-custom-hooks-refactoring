@@ -5,7 +5,7 @@ import {
   IQueryFetchBoardsArgs,
 } from "../../../../commons/types/generated/types";
 
-export interface IBoardListUIProps {
+export interface IBoardListProps {
   data?: Pick<IQuery, "fetchBoards">;
   onClickMoveToBoardNew: () => void;
   onClickMoveToBoardDetail: (event: MouseEvent<HTMLDivElement>) => void;

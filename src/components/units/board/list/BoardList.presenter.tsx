@@ -2,10 +2,10 @@ import { getDate } from "../../../../commons/libraries/utils";
 import Paginations01 from "../../../commons/paginations/01/Paginations01.container";
 import Searchbars01 from "../../../commons/searchbars/01/Searchbars01.container";
 import * as S from "./BoardList.styles";
-import { IBoardListUIProps } from "./BoardList.types";
+import { IBoardListProps } from "./BoardList.types";
 import { v4 as uuidv4 } from "uuid";
 
-export default function BoardListUI(props: IBoardListUIProps) {
+export default function BoardList(props: IBoardListProps) {
   return (
     <S.Wrapper>
       <Searchbars01

@@ -3,9 +3,9 @@ import {
   Searchbar,
   SearchbarInput,
 } from "./Searchbars01.styles";
-import { ISearchbars01UIProps } from "./Searchbars01.types";
+import { ISearchbars01Props } from "./Searchbars01.types";
 
-export default function Searchbars01UI(props: ISearchbars01UIProps) {
+export default function Searchbars01(props: ISearchbars01Props) {
   return (
     <Searchbar>
       <FireFilledIcon />

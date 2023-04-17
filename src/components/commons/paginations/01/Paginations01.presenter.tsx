@@ -1,7 +1,7 @@
 import { Page } from "./Paginations01.styles";
-import { IPaginations01UIProps } from "./Paginations01.types";
+import { IPaginations01Props } from "./Paginations01.types";
 
-export default function Paginations01UI(props: IPaginations01UIProps) {
+export default function Paginations01(props: IPaginations01Props) {
   return (
     <div>
       <Page onClick={props.onClickPrevPage}>{`<`}</Page>
@@ -10,9 +10,7 @@ export default function Paginations01UI(props: IPaginations01UIProps) {
           props.startPage + index <= props.lastPage && (
             <Page
               key={props.startPage + index}
-              onClick={props.onClickPage}
-              id={String(props.startPage + index)}
-              isActive={props.startPage + index === props.activedPage}
+              onClick={props.onClickPage(props.startPage + index)}
             >
               {props.startPage + index}
             </Page>
